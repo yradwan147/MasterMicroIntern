@@ -21,7 +21,6 @@ def eval_(node):
     elif isinstance(node, ast.UnaryOp): # <operator> <operand> e.g., -1
         return operators[type(node.op)](eval_(node.operand))
     else:
-        print(repr(node))
         return False
 
 def eval_expr(expr):
@@ -40,6 +39,8 @@ class InputScreen(Screen):
 
         try:
             # Making all x's lower case
+            if "**" in function:
+                raise Exception("Please use ^ as the power operator")
             function = function.replace('X', 'x').replace('^','**')
 
             # Evaluating if max and min are numbers. Remove the minus sign in case of negative number to avoid errors.
@@ -58,7 +59,6 @@ class InputScreen(Screen):
                 if char.isalpha():
                     letters.add(char.lower())
             if letters != {"x"}:
-                print(letters)
                 raise Exception("Too many variables")
 
             # Function Mathematical Evaluation
@@ -67,7 +67,6 @@ class InputScreen(Screen):
             except ZeroDivisionError as e:
                 raise Exception("Function involves dividing by zero")
             except Exception as e:
-                print(e)
                 raise Exception("Invalid function")
             
             # Create x points for graphing
@@ -88,7 +87,6 @@ class InputScreen(Screen):
             
             # Overlay Figure
             else:
-                print('here')
                 if len(figures) == 0:
                     raise Exception("You need to add at least one figure to overlay on it")
                 plt.figure(figures[-1].number)

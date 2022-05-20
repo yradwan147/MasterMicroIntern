@@ -1,6 +1,5 @@
 task1
--add negative number in expression evaluation
--document
+- testing code
 
 task2:
 -document on API level and class level
@@ -10,5 +9,3 @@ task2:
 -justify use of C++
 
 task3:
--put in function form
--document
