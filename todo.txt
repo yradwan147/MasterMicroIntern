@@ -1,0 +1,14 @@
+task1
+-add negative number in expression evaluation
+-document
+
+task2:
+-document on API level and class level
+-automatic testing
+-code analysis tool?
+-managed pointers
+-justify use of C++
+
+task3:
+-put in function form
+-document

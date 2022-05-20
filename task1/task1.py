@@ -12,6 +12,7 @@ import time
 operators = {ast.Add: op.add, ast.Sub: op.sub, ast.Mult: op.mul,
              ast.Div: op.truediv, ast.Pow: op.pow, ast.USub: op.neg}
 
+# Function to evaluate mathematical experession. Python built-in eval is very flawed security-wise.
 def eval_(node):
     if isinstance(node, ast.Num): # <number>
         return node.n
@@ -26,29 +27,32 @@ def eval_(node):
 def eval_expr(expr):
     return eval_(ast.parse(expr, mode='eval').body)
 
-
-# k = input('Enter your mathematical equation:\n')
-# x = list(range(-1000,1005,5))
-# y = [eval(k.replace('x', '('+str(i)+')').replace('^', '**')) for i in x]
-
-# plt.plot(x,y)
-
+# Local memory of figures
 figures = []
 
+# First Input Screen
 class InputScreen(Screen):
+    # Function to evaluate inputs and graph figures. Add or Overlay is dependent on the function bool argument "overlay"
     def graph(self, overlay=False):
         function = self.ids.function.text
         min = self.ids.min.text
         max = self.ids.max.text
 
         try:
+            # Making all x's lower case
             function = function.replace('X', 'x').replace('^','**')
+
+            # Evaluating if max and min are numbers. Remove the minus sign in case of negative number to avoid errors.
             if not min.lstrip('-').isnumeric():
                 raise Exception("Invalid minimum number")
             if not max.lstrip('-').isnumeric():
                 raise Exception("Invalid maximum number")
+            
+            # Make sure min is less than max
             if int(min) >= int(max):
                 raise Exception("Minimum can't be larger than or equal maximum")
+            
+            # Check that there's only one variable in the function
             letters = set()
             for char in function:
                 if char.isalpha():
@@ -56,6 +60,8 @@ class InputScreen(Screen):
             if letters != {"x"}:
                 print(letters)
                 raise Exception("Too many variables")
+
+            # Function Mathematical Evaluation
             try:
                 eval_expr(function)
             except ZeroDivisionError as e:
@@ -63,17 +69,24 @@ class InputScreen(Screen):
             except Exception as e:
                 print(e)
                 raise Exception("Invalid function")
+            
+            # Create x points for graphing
             x = list(range(int(min),int(max),5))
-            y = [eval(function.replace('x', '('+str(i)+')').replace('^', '**')) for i in x]
-            # plt.clf()
+
+            # Create y points using list comprehension
+            y = [eval(function.replace('x', '('+str(i)+')')) for i in x]
+
+            # Add Figure
             if overlay == False:
                 fig1 = plt.figure()
                 plt.plot(x,y)
+                # Add x and y axes
                 plt.axvline(x=0, c="black", label="x=0")
                 plt.axhline(y=0, c="black", label="y=0")
                 figures.append(fig1)
                 self.ids.res.text = "Added to Figures"
-                time.sleep(0.3)
+            
+            # Overlay Figure
             else:
                 print('here')
                 if len(figures) == 0:
@@ -84,25 +97,29 @@ class InputScreen(Screen):
                 time.sleep(0.3)
             return True
         except Exception as e:
+            # Show error
             self.ids.res.text = "Failure: " + str(e)
             return False
 
 class OutputScreen(Screen):
     def show(self):
         box = self.ids.box
-        # figures.append(plt.gcf())
+
+        # Remove figures to avoid duplication then re add stored figures
         box.clear_widgets()
         for figure in figures:  
             box.add_widget(FigureCanvasKivyAgg(figure))
-        # plt.clf()
 
+    
     def clear(self):
         box = self.ids.box
+        # Clear stored figures and clear shown figures
         figures.clear()
         box.clear_widgets()
 
     def save(self):
         name = self.ids.namer.text
+        # Save figure using name in textinput which has id "namer"
         if name:
             print("saving...")
             plt.savefig(name)
@@ -114,12 +131,6 @@ kv = Builder.load_file("task1.kv")
 
 class MainApp(App):
     def build(self):
-        # self.theme_cls.theme_style = "Dark"
-        # self.theme_cls.primary_palette = "BlueGray"
         return kv
 
-# plt.show()
-
 MainApp().run()
-
-# print(str(y))
