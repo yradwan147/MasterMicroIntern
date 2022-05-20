@@ -199,7 +199,7 @@ public:
             if (topology.get_id() == TopologyID){
                 json j = topology.TopJSONDump();
                 //TODO fix
-                ofstream o(to_string(topology.get_id())+".json");
+                ofstream o(topology.get_id()+".json");
                 o << setw(4) << j << endl;
                 return "Output Written\n";
             }
