@@ -261,7 +261,7 @@ int main ()
     cout << mem.getTopologies() << endl;
     cout << mem.getTopologyDevices("top1") << endl;
     cout << mem.deleteTopology("top1") << endl;
-    cout << mem.getTopologyDevices("top1") << endl;
+    cout << mem.getTopologyDevicesNetList("top1", "vss") << endl;
 
 
 }

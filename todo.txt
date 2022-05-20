@@ -1,11 +1,5 @@
 task1:
-testing import rather than redeclare
 
 task2:
--document on API level and class level
--automatic testing
--code analysis tool?
--managed pointers
--justify use of C++
 
 task3:
