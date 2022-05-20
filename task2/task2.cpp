@@ -255,12 +255,20 @@ int readJSON(string filename){
 int main ()
 {   
 
+    // Testing code
+    cout << ">>Reading topology top1" << endl;
     cout << readJSON("topology.json") << endl;
+    cout << "\n>>Reading topology top1" << endl;
     cout << readJSON("topology.json") << endl;
+    cout << "\n>>Dumping topology top1" << endl;
     cout << mem.dumpTopology("top1")<<endl;
+    cout << "\n>>Getting all topologies in memory" << endl;
     cout << mem.getTopologies() << endl;
+    cout << "\n>>Getting all devices in top1" << endl;
     cout << mem.getTopologyDevices("top1") << endl;
+    cout << "\n>>Deleting top1 (one of them)" << endl;
     cout << mem.deleteTopology("top1") << endl;
+    cout << "\n>>Getting all devices in top1 with vss netlist device" << endl;
     cout << mem.getTopologyDevicesNetList("top1", "vss") << endl;
 
 
