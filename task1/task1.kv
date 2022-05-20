@@ -1,0 +1,96 @@
+WindowManager:
+    InputScreen:
+    OutputScreen:
+
+
+<InputScreen>:
+    name:"first"
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
+                text: "Enter your mathematical function\nPlease use * to mutliply: for example, to write 2x, use 2*x\nMake sure your function doesn't divide by zero"
+                valign: 'middle'
+            TextInput:
+                id: function
+                multiline:False
+            
+            Label:
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
+                text: "Enter minimum"
+            TextInput:
+                id: min
+                multiline:False
+            
+            Label:
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
+                text: "Enter maximum"
+            TextInput:
+                id: max
+                multiline:False
+
+        Button:
+            text:"Add"
+            size_hint: (1,.2)
+            on_press: 
+                x = root.graph()
+                if x == True:app.root.current = "second";
+                    # root.manager.transition.direction="left";
+        Button:
+            text:"Overlay"
+            size_hint: (1,.2)
+            on_press: 
+                x = root.graph(True)
+                if x == True:app.root.current = "second";
+                    # root.manager.transition.direction="left";
+
+        Label:
+            text:""
+            size_hint: (1,.2)
+            id:res
+
+        
+
+<OutputScreen>:
+    name:"second"
+    BoxLayout:
+        orientation:"vertical"
+        id:box
+        size_hint_y : .8
+        pos_hint: {"top":1}
+
+    BoxLayout:
+        size_hint_y: .2
+        Button:
+            text:"Show"
+            on_press:
+                root.show()
+
+        Button:
+            text:"Clear"
+            on_press:
+                root.clear()
+        
+        Button:
+            text:"Back"
+            on_press:
+                app.root.current = "first"
+                root.manager.transition.direction="right"
+        Button:
+            text:"Save Last Figure"
+            on_press:
+                root.save()
+        TextInput:
+            hint_text:"Enter filename"
+            id:namer
