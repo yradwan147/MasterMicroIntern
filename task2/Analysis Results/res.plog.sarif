@@ -1,0 +1,1678 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "PVS-Studio",
+          "semanticVersion": "7.18.59865.3530",
+          "informationUri": "https://pvs-studio.com",
+          "rules": [
+            {
+              "id": "V1003",
+              "name": "RuleV1003",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v1003/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v1003/"
+            },
+            {
+              "id": "V1037",
+              "name": "RuleV1037",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v1037/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v1037/",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-691"
+                ]
+              }
+            },
+            {
+              "id": "V524",
+              "name": "RuleV524",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v524/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v524/"
+            },
+            {
+              "id": "V547",
+              "name": "RuleV547",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v547/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v547/",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-571"
+                ]
+              }
+            },
+            {
+              "id": "V550",
+              "name": "RuleV550",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v550/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v550/",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-682"
+                ]
+              }
+            },
+            {
+              "id": "V553",
+              "name": "RuleV553",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v553/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v553/"
+            },
+            {
+              "id": "V565",
+              "name": "RuleV565",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v565/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v565/",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-544"
+                ]
+              }
+            },
+            {
+              "id": "V659",
+              "name": "RuleV659",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v659/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v659/"
+            },
+            {
+              "id": "V690",
+              "name": "RuleV690",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v690/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v690/"
+            },
+            {
+              "id": "V807",
+              "name": "RuleV807",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v807/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v807/"
+            },
+            {
+              "id": "V813",
+              "name": "RuleV813",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v813/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v813/"
+            },
+            {
+              "id": "V831",
+              "name": "RuleV831",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v831/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v831/"
+            },
+            {
+              "id": "V833",
+              "name": "RuleV833",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v833/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v833/"
+            },
+            {
+              "id": "V801",
+              "name": "RuleV801",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v801/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v801/"
+            },
+            {
+              "id": "V826",
+              "name": "RuleV826",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v826/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v826/"
+            },
+            {
+              "id": "V818",
+              "name": "RuleV818",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v818/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v818/"
+            },
+            {
+              "id": "V820",
+              "name": "RuleV820",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v820/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v820/"
+            },
+            {
+              "id": "V815",
+              "name": "RuleV815",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v815/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v815/"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "V1003",
+          "message": {
+            "text": "The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameters 'major', 'minor' must be surrounded by parentheses."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 294,
+                  "endLine": 294,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V1003",
+          "message": {
+            "text": "The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameters 'major', 'minor' must be surrounded by parentheses."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 296,
+                  "endLine": 296,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V1003",
+          "message": {
+            "text": "The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameter 'major' must be surrounded by parentheses."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 298,
+                  "endLine": 298,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V1037",
+          "message": {
+            "text": "Two or more case-branches perform the same actions. Check lines: 21774, 21796"
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 21774,
+                  "endLine": 21774,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 21796,
+                  "endLine": 21796,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V524",
+          "message": {
+            "text": "It is odd that the body of 'end_array' function is fully equivalent to the body of 'end_object' function."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6257,
+                  "endLine": 6257,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6238,
+                  "endLine": 6238,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V547",
+          "message": {
+            "text": "Expression 'mant <= 1024' is always true."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 9328,
+                  "endLine": 9328,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V547",
+          "message": {
+            "text": "Expression 'mant <= 1024' is always true."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 10803,
+                  "endLine": 10803,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V547",
+          "message": {
+            "text": "Expression 'byte < utf8d.size()' is always true. The value range of unsigned char type: [0, 255]."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 17868,
+                  "endLine": 17868,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V550",
+          "message": {
+            "text": "An odd precise comparison. It's probably better to use a comparison with defined precision: fabs(A - B) < Epsilon."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 15764,
+                  "endLine": 15764,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V553",
+          "message": {
+            "text": "The length of 'binary_reader' class's declaration is more than 2000 lines long. You should consider refactoring the code."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 8535,
+                  "endLine": 8535,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V553",
+          "message": {
+            "text": "The length of 'basic_json' class's declaration is more than 2000 lines long. You should consider refactoring the code."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 18213,
+                  "endLine": 18213,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V565",
+          "message": {
+            "text": "An empty exception handler. Silent suppression of exceptions can hide the presence of bugs in source code during testing."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 22904,
+                  "endLine": 22904,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'convert' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 13713, 13720."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 13720,
+                  "endLine": 13720,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 13713,
+                  "endLine": 13713,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'operator []' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 17999, 18004."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 18004,
+                  "endLine": 18004,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 17999,
+                  "endLine": 17999,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'at' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20044, 20067."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20067,
+                  "endLine": 20067,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20044,
+                  "endLine": 20044,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'begin' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20825, 20834."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20834,
+                  "endLine": 20834,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20825,
+                  "endLine": 20825,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'end' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20850, 20859."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20859,
+                  "endLine": 20859,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20850,
+                  "endLine": 20850,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'rbegin' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20875, 20882."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20882,
+                  "endLine": 20882,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20875,
+                  "endLine": 20875,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V659",
+          "message": {
+            "text": "Declarations of functions with 'rend' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20889, 20896."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20896,
+                  "endLine": 20896,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20889,
+                  "endLine": 20889,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V690",
+          "message": {
+            "text": "The 'basic_json' class implements a move constructor, but lacks the move assignment operator. It is dangerous to use such a class."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 18213,
+                  "endLine": 18213,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V807",
+          "message": {
+            "text": "Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6299,
+                  "endLine": 6299,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6301,
+                  "endLine": 6301,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6303,
+                  "endLine": 6303,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6304,
+                  "endLine": 6304,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V807",
+          "message": {
+            "text": "Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6449,
+                  "endLine": 6449,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6452,
+                  "endLine": 6452,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6456,
+                  "endLine": 6456,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V807",
+          "message": {
+            "text": "Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6586,
+                  "endLine": 6586,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6589,
+                  "endLine": 6589,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6591,
+                  "endLine": 6591,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6592,
+                  "endLine": 6592,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'M_minus', 'w', 'M_plus' arguments should probably be rendered as constant references."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 16433,
+                  "endLine": 16433,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'm_minus', 'v', 'm_plus' arguments should probably be rendered as constant references."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 16674,
+                  "endLine": 16674,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V831",
+          "message": {
+            "text": "Decreased performance. Consider replacing the call to the 'at()' method with the 'operator[]'."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 10588,
+                  "endLine": 10588,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V833",
+          "message": {
+            "text": "Passing the const-qualified object 'arr' to the 'std::move' function disables move semantics."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 5130,
+                  "endLine": 5130,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V833",
+          "message": {
+            "text": "Passing the const-qualified object 'number_string' to the 'std::move' function disables move semantics."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 11101,
+                  "endLine": 11101,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V801",
+          "message": {
+            "text": "Decreased performance. It is better to redefine the first function argument as a reference. Consider replacing 'const .. ptr' with 'const .. &ptr'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 20808,
+                  "endLine": 20808,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V801",
+          "message": {
+            "text": "Decreased performance. It is better to redefine the second function argument as a reference. Consider replacing 'const .. cb' with 'const .. &cb'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 21976,
+                  "endLine": 21976,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V801",
+          "message": {
+            "text": "Decreased performance. It is better to redefine the third function argument as a reference. Consider replacing 'const .. cb' with 'const .. &cb'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 21991,
+                  "endLine": 21991,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V801",
+          "message": {
+            "text": "Decreased performance. It is better to redefine the second function argument as a reference. Consider replacing 'const .. cb' with 'const .. &cb'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 22003,
+                  "endLine": 22003,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V807",
+          "message": {
+            "text": "Decreased performance. Consider creating a reference to avoid using the 'j.get_binary()' expression repeatedly."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 5468,
+                  "endLine": 5468,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 5469,
+                  "endLine": 5469,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 5471,
+                  "endLine": 5471,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V826",
+          "message": {
+            "text": "Consider replacing the 'l' std::forward_list with std::vector. Contiguous placement of elements in memory can be more efficient."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 4248,
+                  "endLine": 4248,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'dev' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 73,
+                  "endLine": 73,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'dev' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 105,
+                  "endLine": 105,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'top' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 158,
+                  "endLine": 158,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 175,
+                  "endLine": 175,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 185,
+                  "endLine": 185,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 195,
+                  "endLine": 195,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V813",
+          "message": {
+            "text": "Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 210,
+                  "endLine": 210,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V818",
+          "message": {
+            "text": "It is more efficient to use an initialization list 'id(id_in), properties(prop_in), netlist(net_in), type(type_in), properties_name(prop_name)' rather than an assignment operator."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 29,
+                  "endLine": 29,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 30,
+                  "endLine": 30,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 33,
+                  "endLine": 33,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V818",
+          "message": {
+            "text": "It is more efficient to use an initialization list 'id(id_in)' rather than an assignment operator."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 96,
+                  "endLine": 96,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 97,
+                  "endLine": 97,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'id_in' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 30,
+                  "endLine": 30,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'prop_in' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'net_in' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 32,
+                  "endLine": 32,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'type_in' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 33,
+                  "endLine": 33,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'prop_name' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 34,
+                  "endLine": 34,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V820",
+          "message": {
+            "text": "The 'id_in' variable is not used after copying. Copying can be replaced with move/swap for optimization."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 97,
+                  "endLine": 97,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V815",
+          "message": {
+            "text": "Decreased performance. Consider replacing the expression 'id = \"\"' with 'id.clear()'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 94,
+                  "endLine": 94,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V815",
+          "message": {
+            "text": "Decreased performance. Consider replacing the expression 'res == \"\"' with 'res.empty()'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 115,
+                  "endLine": 115,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V815",
+          "message": {
+            "text": "Decreased performance. Consider replacing the expression 'res == \"\"' with 'res.empty()'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 129,
+                  "endLine": 129,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V815",
+          "message": {
+            "text": "Decreased performance. Consider replacing the expression 'res == \"\"' with 'res.empty()'."
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D%3A/OneDrive%20-%20Nile%20University/Master%20Micro%20Careers/Application/task2/testing/UnitTest1/task2.cpp"
+                },
+                "region": {
+                  "startLine": 169,
+                  "endLine": 169,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

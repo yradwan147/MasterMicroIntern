@@ -1,0 +1,1238 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Solution_Path">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SolutionPath" type="xs:string" minOccurs="0" />
+                <xs:element name="SolutionVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="PlogVersion" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="ModificationDate" msdata:DateTimeMode="Utc" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="PVS-Studio_Analysis_Log">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FavIcon" type="xs:boolean" minOccurs="0" msdata:Ordinal="0" />
+                <xs:element name="Level" type="xs:unsignedInt" minOccurs="0" msdata:Ordinal="1" />
+                <xs:element name="DefaultOrder" type="xs:int" minOccurs="0" msdata:Ordinal="2" />
+                <xs:element name="ErrorCode" type="xs:string" msdata:Ordinal="3" />
+                <xs:element name="Message" type="xs:string" msdata:Ordinal="4" />
+                <xs:element name="Project" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+                <xs:element name="ShortFile" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+                <xs:element name="Line" type="xs:int" msdata:Ordinal="7" />
+                <xs:element name="FalseAlarm" type="xs:boolean" minOccurs="0" msdata:Ordinal="8" />
+                <xs:element name="File" type="xs:string" msdata:Ordinal="9" />
+                <xs:element name="CodePrev" type="xs:unsignedInt" minOccurs="0" msdata:Ordinal="10" />
+                <xs:element name="CodeCurrent" type="xs:unsignedInt" minOccurs="0" msdata:Ordinal="11" />
+                <xs:element name="CodeNext" type="xs:unsignedInt" minOccurs="0" msdata:Ordinal="12" />
+                <xs:element name="TrialMessage" type="xs:boolean" minOccurs="0" msdata:Ordinal="13" />
+                <xs:element name="Analyzer" type="xs:int" minOccurs="0" msdata:Ordinal="14" />
+                <xs:element name="LineExtension" type="xs:string" minOccurs="0" msdata:Ordinal="15" />
+                <xs:element name="Retired" type="xs:boolean" default="false" minOccurs="0" msdata:Ordinal="16" />
+                <xs:element name="AnalyzedSourceFiles" type="xs:string" minOccurs="0" msdata:Ordinal="17" />
+                <xs:element name="CWECode" type="xs:string" minOccurs="0" msdata:Ordinal="18" />
+                <xs:element name="SAST" type="xs:string" minOccurs="0" msdata:Ordinal="19" />
+                <xs:element name="Positions" msdata:DataType="ProgramVerificationSystems.PVSStudio.CommonTypes.SourceFilePositions, PVS-Studio-vs2019, Version=7.18.59865.3530, Culture=neutral, PublicKeyToken=null" type="xs:anyType" minOccurs="0" msdata:Ordinal="20" />
+                <xs:element name="MISRA" type="xs:string" minOccurs="0" msdata:Ordinal="21" />
+              </xs:sequence>
+              <xs:attribute name="ErrorCodeNumeric" msdata:ReadOnly="true" msdata:Expression="IIF(LEN(ErrorCode) &lt; 2 OR (SUBSTRING(ErrorCode, 1, 1) &lt;&gt; 'V'), 0, CONVERT(SUBSTRING(ErrorCode, 2, LEN(ErrorCode) - 1), 'System.UInt32'))" type="xs:unsignedInt" use="prohibited" />
+              <xs:attribute name="CWECodeNumeric" msdata:ReadOnly="true" msdata:Expression="ISNULL(IIF(LEN(CWECode) &lt; 4 + 1 OR (SUBSTRING(CWECode, 1, 4) &lt;&gt; 'CWE-'), 4294967295, CONVERT(SUBSTRING(CWECode, 4 + 1, LEN(CWECode) - 4), 'System.UInt32')), 4294967295)" type="xs:unsignedInt" use="prohibited" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//PVS-Studio_Analysis_Log" />
+        <xs:field xpath="Line" />
+        <xs:field xpath="Message" />
+        <xs:field xpath="File" />
+        <xs:field xpath="ErrorCode" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Solution_Path>
+    <SolutionPath>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\UnitTest1.sln</SolutionPath>
+    <SolutionVersion>16.0</SolutionVersion>
+    <PlogVersion>7</PlogVersion>
+    <ModificationDate>2022-05-20T11:45:22.713595Z</ModificationDate>
+  </Solution_Path>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>1</DefaultOrder>
+    <ErrorCode>V826</ErrorCode>
+    <Message>Consider replacing the 'l' std::forward_list with std::vector. Contiguous placement of elements in memory can be more efficient.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>4248</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2556014080</CodePrev>
+    <CodeCurrent>2223806914</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="4248">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>2</DefaultOrder>
+    <ErrorCode>V833</ErrorCode>
+    <Message>Passing the const-qualified object 'arr' to the 'std::move' function disables move semantics.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>5130</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>1681702742</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="5130">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>3</DefaultOrder>
+    <ErrorCode>V807</ErrorCode>
+    <Message>Decreased performance. Consider creating a reference to avoid using the 'j.get_binary()' expression repeatedly.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>5468</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3963084018</CodeCurrent>
+    <CodeNext>145937370</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="5468,5469,5471">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>4</DefaultOrder>
+    <ErrorCode>V807</ErrorCode>
+    <Message>Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>6299</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>2721524539</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="6299,6301,6303,6304">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>5</DefaultOrder>
+    <ErrorCode>V807</ErrorCode>
+    <Message>Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>6449</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>1299046442</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="6449,6452,6456">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>6</DefaultOrder>
+    <ErrorCode>V807</ErrorCode>
+    <Message>Decreased performance. Consider creating a pointer to avoid using the 'ref_stack.back()' expression repeatedly.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>6586</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>903928114</CodePrev>
+    <CodeCurrent>2721524539</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="6586,6589,6591,6592">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>7</DefaultOrder>
+    <ErrorCode>V547</ErrorCode>
+    <Message>Expression 'mant &lt;= 1024' is always true.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>9328</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>4274615406</CodePrev>
+    <CodeCurrent>1073041737</CodeCurrent>
+    <CodeNext>91201</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-571</CWECode>
+    <Positions>
+      <Position lines="9328">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>8</DefaultOrder>
+    <ErrorCode>V831</ErrorCode>
+    <Message>Decreased performance. Consider replacing the call to the 'at()' method with the 'operator[]'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>10588</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>3917736663</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="10588">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>9</DefaultOrder>
+    <ErrorCode>V547</ErrorCode>
+    <Message>Expression 'mant &lt;= 1024' is always true.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>10803</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>4274615406</CodePrev>
+    <CodeCurrent>1073041737</CodeCurrent>
+    <CodeNext>91201</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-571</CWECode>
+    <Positions>
+      <Position lines="10803">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>10</DefaultOrder>
+    <ErrorCode>V833</ErrorCode>
+    <Message>Passing the const-qualified object 'number_string' to the 'std::move' function disables move semantics.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>11101</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>927601772</CodePrev>
+    <CodeCurrent>3934805476</CodeCurrent>
+    <CodeNext>3710432110</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="11101">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>11</DefaultOrder>
+    <ErrorCode>V553</ErrorCode>
+    <Message>The length of 'binary_reader' class's declaration is more than 2000 lines long. You should consider refactoring the code.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>8535</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>3942363626</CodePrev>
+    <CodeCurrent>9199984</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="8535">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>12</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'convert' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 13713, 13720.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>13720</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>3693577868</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="13720,13713">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>13</DefaultOrder>
+    <ErrorCode>V550</ErrorCode>
+    <Message>An odd precise comparison. It's probably better to use a comparison with defined precision: fabs(A - B) &lt; Epsilon.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>15764</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>3422165309</CodePrev>
+    <CodeCurrent>2727080617</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-682</CWECode>
+    <SAST>CERT-FLP02-C</SAST>
+    <Positions>
+      <Position lines="15764">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>14</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'M_minus', 'w', 'M_plus' arguments should probably be rendered as constant references.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>16433</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>526870128</CodePrev>
+    <CodeCurrent>1105860088</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="16433">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>15</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'm_minus', 'v', 'm_plus' arguments should probably be rendered as constant references.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>16674</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2878502496</CodePrev>
+    <CodeCurrent>3253353976</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="16674">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>16</DefaultOrder>
+    <ErrorCode>V547</ErrorCode>
+    <Message>Expression 'byte &lt; utf8d.size()' is always true. The value range of unsigned char type: [0, 255].</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>17868</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>4206460226</CodeCurrent>
+    <CodeNext>609046828</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-571</CWECode>
+    <Positions>
+      <Position lines="17868">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>17</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'operator []' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 17999, 18004.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>18004</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>2314351782</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="18004,17999">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>18</DefaultOrder>
+    <ErrorCode>V801</ErrorCode>
+    <Message>Decreased performance. It is better to redefine the first function argument as a reference. Consider replacing 'const .. ptr' with 'const .. &amp;ptr'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20808</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2701559519</CodePrev>
+    <CodeCurrent>1674668421</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20808">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>19</DefaultOrder>
+    <ErrorCode>V1037</ErrorCode>
+    <Message>Two or more case-branches perform the same actions. Check lines: 21774, 21796</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>21774</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>9242330</CodePrev>
+    <CodeCurrent>176909</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-691</CWECode>
+    <Positions>
+      <Position lines="21774,21796">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>20</DefaultOrder>
+    <ErrorCode>V801</ErrorCode>
+    <Message>Decreased performance. It is better to redefine the second function argument as a reference. Consider replacing 'const .. cb' with 'const .. &amp;cb'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>21976</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>1253261867</CodePrev>
+    <CodeCurrent>2465212124</CodeCurrent>
+    <CodeNext>120157331</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="21976">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>21</DefaultOrder>
+    <ErrorCode>V801</ErrorCode>
+    <Message>Decreased performance. It is better to redefine the third function argument as a reference. Consider replacing 'const .. cb' with 'const .. &amp;cb'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>21991</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>6329568</CodePrev>
+    <CodeCurrent>2465212124</CodeCurrent>
+    <CodeNext>120157331</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="21991">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>22</DefaultOrder>
+    <ErrorCode>V801</ErrorCode>
+    <Message>Decreased performance. It is better to redefine the second function argument as a reference. Consider replacing 'const .. cb' with 'const .. &amp;cb'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>22003</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>3497824181</CodePrev>
+    <CodeCurrent>2465212124</CodeCurrent>
+    <CodeNext>120157331</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="22003">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>23</DefaultOrder>
+    <ErrorCode>V565</ErrorCode>
+    <Message>An empty exception handler. Silent suppression of exceptions can hide the presence of bugs in source code during testing.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>22904</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2967597046</CodePrev>
+    <CodeCurrent>123</CodeCurrent>
+    <CodeNext>2131189223</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <CWECode>CWE-544</CWECode>
+    <SAST>CERT-ERR56-CPP</SAST>
+    <Positions>
+      <Position lines="22904">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>24</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'at' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20044, 20067.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20067</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>3485463271</CodePrev>
+    <CodeCurrent>3553977454</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20067,20044">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>25</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'begin' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20825, 20834.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20834</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2113901913</CodePrev>
+    <CodeCurrent>3042928499</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20834,20825">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>26</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'end' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20850, 20859.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20859</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2675959102</CodePrev>
+    <CodeCurrent>3981273050</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20859,20850">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>27</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'rbegin' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20875, 20882.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20882</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>4227804851</CodePrev>
+    <CodeCurrent>733901279</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20882,20875">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>28</DefaultOrder>
+    <ErrorCode>V659</ErrorCode>
+    <Message>Declarations of functions with 'rend' name differ in the 'const' keyword only, but the bodies of these functions have different composition. This is suspicious and can possibly be an error. Check lines: 20889, 20896.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>20896</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>1056951236</CodePrev>
+    <CodeCurrent>3405062769</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="20896,20889">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>29</DefaultOrder>
+    <ErrorCode>V553</ErrorCode>
+    <Message>The length of 'basic_json' class's declaration is more than 2000 lines long. You should consider refactoring the code.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>18213</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2091604883</CodePrev>
+    <CodeCurrent>1231487544</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="18213">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>30</DefaultOrder>
+    <ErrorCode>V690</ErrorCode>
+    <Message>The 'basic_json' class implements a move constructor, but lacks the move assignment operator. It is dangerous to use such a class.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>18213</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>2091604883</CodePrev>
+    <CodeCurrent>1231487544</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="18213">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>31</DefaultOrder>
+    <ErrorCode>V818</ErrorCode>
+    <Message>It is more efficient to use an initialization list 'id(id_in), properties(prop_in), netlist(net_in), type(type_in), properties_name(prop_name)' rather than an assignment operator.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>29</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>5816</CodePrev>
+    <CodeCurrent>3765971663</CodeCurrent>
+    <CodeNext>23707</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="29,30,31,32,33,34">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>32</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'id_in' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>30</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>3765971663</CodePrev>
+    <CodeCurrent>23707</CodeCurrent>
+    <CodeNext>23161563</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="30">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>33</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'prop_in' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>31</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>23707</CodePrev>
+    <CodeCurrent>23161563</CodeCurrent>
+    <CodeNext>1194843</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="31">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>34</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'net_in' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>32</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>23161563</CodePrev>
+    <CodeCurrent>1194843</CodeCurrent>
+    <CodeNext>364715</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="32">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>35</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'type_in' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>33</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>1194843</CodePrev>
+    <CodeCurrent>364715</CodeCurrent>
+    <CodeNext>2961218253</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="33">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>36</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'prop_name' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>34</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>364715</CodePrev>
+    <CodeCurrent>2961218253</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="34">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>37</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'dev' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>73</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>278430262</CodePrev>
+    <CodeCurrent>1200836985</CodeCurrent>
+    <CodeNext>321699057</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="73">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>38</DefaultOrder>
+    <ErrorCode>V815</ErrorCode>
+    <Message>Decreased performance. Consider replacing the expression 'id = ""' with 'id.clear()'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>94</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>121425</CodePrev>
+    <CodeCurrent>2687</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="94">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>39</DefaultOrder>
+    <ErrorCode>V818</ErrorCode>
+    <Message>It is more efficient to use an initialization list 'id(id_in)' rather than an assignment operator.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>96</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>248907369</CodeCurrent>
+    <CodeNext>23707</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="96,97">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>40</DefaultOrder>
+    <ErrorCode>V820</ErrorCode>
+    <Message>The 'id_in' variable is not used after copying. Copying can be replaced with move/swap for optimization.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>97</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>248907369</CodePrev>
+    <CodeCurrent>23707</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="97">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>41</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'dev' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>105</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>32871</CodePrev>
+    <CodeCurrent>1361492089</CodeCurrent>
+    <CodeNext>295052185</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="105">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>42</DefaultOrder>
+    <ErrorCode>V815</ErrorCode>
+    <Message>Decreased performance. Consider replacing the expression 'res == ""' with 'res.empty()'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>115</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>186753</CodeCurrent>
+    <CodeNext>190385755</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="115">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>43</DefaultOrder>
+    <ErrorCode>V815</ErrorCode>
+    <Message>Decreased performance. Consider replacing the expression 'res == ""' with 'res.empty()'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>129</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>186753</CodeCurrent>
+    <CodeNext>190385755</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="129">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>44</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'top' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>158</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>1097758521</CodePrev>
+    <CodeCurrent>1557442227</CodeCurrent>
+    <CodeNext>163128017</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="158">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>45</DefaultOrder>
+    <ErrorCode>V815</ErrorCode>
+    <Message>Decreased performance. Consider replacing the expression 'res == ""' with 'res.empty()'.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>169</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>125</CodePrev>
+    <CodeCurrent>186753</CodeCurrent>
+    <CodeNext>1524737627</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="169">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>46</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>175</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>1700419751</CodePrev>
+    <CodeCurrent>2851092292</CodeCurrent>
+    <CodeNext>2574691021</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="175">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>47</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>185</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>2552436119</CodePrev>
+    <CodeCurrent>407080512</CodeCurrent>
+    <CodeNext>2574691021</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="185">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>48</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>195</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>1124726649</CodePrev>
+    <CodeCurrent>2462142939</CodeCurrent>
+    <CodeNext>9749</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="195">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>49</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'TopologyID' argument should probably be rendered as a constant reference.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>task2.cpp</ShortFile>
+    <Line>210</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</File>
+    <CodePrev>4209229421</CodePrev>
+    <CodeCurrent>2864792325</CodeCurrent>
+    <CodeNext>2574691021</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+    <Positions>
+      <Position lines="210">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>50</DefaultOrder>
+    <ErrorCode>V524</ErrorCode>
+    <Message>It is odd that the body of 'end_array' function is fully equivalent to the body of 'end_object' function.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>6257</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>1171509</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="6257,6238">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>51</DefaultOrder>
+    <ErrorCode>V1003</ErrorCode>
+    <Message>The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameters 'major', 'minor' must be surrounded by parentheses.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>294</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>797114336</CodePrev>
+    <CodeCurrent>1727688729</CodeCurrent>
+    <CodeNext>797114320</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="294">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>52</DefaultOrder>
+    <ErrorCode>V1003</ErrorCode>
+    <Message>The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameters 'major', 'minor' must be surrounded by parentheses.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>296</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>797114320</CodePrev>
+    <CodeCurrent>2311926066</CodeCurrent>
+    <CodeNext>43</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="296">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>53</DefaultOrder>
+    <ErrorCode>V1003</ErrorCode>
+    <Message>The macro 'JSON_HEDLEY_MSVC_VERSION_CHECK' is a dangerous expression. The parameter 'major' must be surrounded by parentheses.</Message>
+    <Project>UnitTest1</Project>
+    <ShortFile>json.hpp</ShortFile>
+    <Line>298</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</File>
+    <CodePrev>43</CodePrev>
+    <CodeCurrent>2303549587</CodeCurrent>
+    <CodeNext>100</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\task2.cpp</AnalyzedSourceFiles>
+    <Positions>
+      <Position lines="298">D:\OneDrive - Nile University\Master Micro Careers\Application\task2\testing\UnitTest1\nlohmann\json.hpp</Position>
+    </Positions>
+  </PVS-Studio_Analysis_Log>
+</NewDataSet>

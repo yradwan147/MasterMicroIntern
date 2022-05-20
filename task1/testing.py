@@ -7,6 +7,7 @@ operators = {ast.Add: op.add, ast.Sub: op.sub, ast.Mult: op.mul,
              ast.Div: op.truediv, ast.Pow: op.pow, ast.USub: op.neg}
 
 # Function to evaluate mathematical experession. Python built-in eval is very flawed security-wise.
+# Copied from task1.py
 def eval_(node):
     if isinstance(node, ast.Num): # <number>
         return node.n
@@ -20,7 +21,7 @@ def eval_(node):
 def eval_expr(expr):
     return eval_(ast.parse(expr, mode='eval').body)
 
-
+# Copied from task1.py
 def input_error(function, min, max):
 
     if "**" in function:
@@ -56,6 +57,7 @@ def input_error(function, min, max):
     
     return "Valid"
     
+# Copied from task1.py
 def gen_points(function, min, max):
     function = function.replace('X', 'x').replace('^','**')
     # Create x points for graphing
